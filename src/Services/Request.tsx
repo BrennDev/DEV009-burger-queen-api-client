@@ -1,7 +1,7 @@
 import { Product } from "../pages/Waiter/OrdersList";
 
 export const auth = (email: string, password: string) => {
-  return fetch('http://localhost:8080/login', {
+  return fetch('https://burger-queen-api-mock-production-f025.up.railway.app/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ export const auth = (email: string, password: string) => {
 };
 
 export const products = (token: string) => {
-  return fetch('http://localhost:8080/products', {
+  return fetch('https://burger-queen-api-mock-production-f025.up.railway.app/products', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const postOrder = (data: {
   table: string,
   products: Product[],
 }, token: string) => {
-  return fetch(`http://localhost:8080/orders`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/orders`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export const postOrder = (data: {
 };
 
 export const addProduct = (data: { name: string, type: string, price: number, id: number, image: any }, token: string) => {
-  return fetch(`http://localhost:8080/products`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/products`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export const addProduct = (data: { name: string, type: string, price: number, id
 };
 
 export const allOrders = (token: string) => {
-  return fetch('http://localhost:8080/orders', {
+  return fetch('https://burger-queen-api-mock-production-f025.up.railway.app/orders', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export const allOrders = (token: string) => {
 };
 
 export const deleteProduct = (id: number, token: string) => {
-  return fetch(`http://localhost:8080/products/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/products/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ export const deleteProduct = (id: number, token: string) => {
 };
 
 export const deleteOrder = (id: number, token: string) => {
-  return fetch(`http://localhost:8080/orders/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/orders/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export const deleteOrder = (id: number, token: string) => {
 };
 
 export const editProduct = (id: number, updatedData: any, token: string) => {
-  return fetch(`http://localhost:8080/products/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/products/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ export const editProduct = (id: number, updatedData: any, token: string) => {
  };
 
  export const addUsers = (data: { name: string, email: string, password: string, role:string, id: number}, token:string) => {
-  return fetch(`http://localhost:8080/users`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/users`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ export const editProduct = (id: number, updatedData: any, token: string) => {
 };
 
 export const deleteUser = (id:number, token:string) => {
-  return fetch(`http://localhost:8080/users/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/users/${id}`, {
       method: 'DELETE',
       headers: {
           'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ export const deleteUser = (id:number, token:string) => {
 }
 
 export const editUser = (id:number, updatedData:object, token:string) => {
-  return fetch(`http://localhost:8080/users/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/users/${id}`, {
       method: 'PATCH',
       headers: {
           'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ export const editUser = (id:number, updatedData:object, token:string) => {
 };
 
 export const users = (token:string) => {
-  return fetch('http://localhost:8080/users', {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/users`, {
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ export const users = (token:string) => {
 }
 
 export const userOrder = (id:number, token:string) => {
-  return fetch(`http://localhost:8080/orders/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/orders/${id}`, {
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ export const userOrder = (id:number, token:string) => {
 };
 
 export const patchOrder = (id:number, updatedData:any, token:string) => {
-  return fetch(`http://localhost:8080/orders/${id}`, {
+  return fetch(`https://burger-queen-api-mock-production-f025.up.railway.app/orders/${id}`, {
       method: 'PATCH',
       headers: {
           'Content-Type': 'application/json',
